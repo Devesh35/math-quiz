@@ -35,6 +35,7 @@ export const useHome = () => {
         .catch((e) => {
           console.log(e);
           showToast('Unable to save !', 'warning');
+          setIsLoadingResponse(false);
         });
     } else {
       showToast('Incorrect Answer!', 'error');
